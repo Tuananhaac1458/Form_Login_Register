@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Stt</th>
+            <th scope="col">ID</th>
+            <th scope="col">User</th>
+            <th scope="col">Pass</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let acc of account, let i = index"> 
+            <th scope="row">{{i}}</th>
+            <td>{{acc.id}}</td>
+            <td>{{acc.user}}</td>
+            <td>{{acc.pass}}</td>
+            <td width="15%"><button class="btn btn-danger" (click)="deleteacc(i)">Delete</button> &nbsp;&nbsp;<button class="btn btn-success">Update</button></td>
+          
+          </tr>
+    </tbody>
+</table>
