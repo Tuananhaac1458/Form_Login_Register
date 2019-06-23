@@ -3,7 +3,16 @@ import { Loginservice } from '../service/servicelogin.service';
 
 @Component({
     selector: 'app-register',
-    templateUrl: './register.component.html'
+    templateUrl: './register.component.html',
+    styles: [`
+    .ng-valid[required], .ng-valid.required  {
+        border-left: 5px solid #42A948; /* green */
+      }
+      
+      .ng-invalid:not(form),  {
+        border-left: 5px solid #a94442; /* red */
+      }
+      `]
 })
 
 export class Register implements OnInit {
