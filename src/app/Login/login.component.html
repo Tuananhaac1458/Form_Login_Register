@@ -5,6 +5,8 @@
             <th scope="col">ID</th>
             <th scope="col">User</th>
             <th scope="col">Pass</th>
+            <th scope="col">Status</th>
+            <th scope="col">Button</th>
         </tr>
     </thead>
     <tbody>
@@ -14,7 +16,7 @@
             <td>{{acc.name}}</td>
             <td>{{acc.pass}}</td>
             <td>{{acc.status}}</td>
-            <td width="15%"><button class="btn btn-danger" (click)="deleteacc(i)">Delete</button> &nbsp;&nbsp;<button class="btn btn-success">Update</button></td>
+            <td width="15%"><button class="btn btn-danger" (click)="deleteacc(acc.id)">Delete</button> &nbsp;&nbsp;<button class="btn btn-success">Update</button></td>
           
           </tr>
     </tbody>

@@ -21,6 +21,7 @@ import {HttpUtilsService} from './util/http.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+   
   ],
   providers: [Loginservice,HttpUtilsService],
   bootstrap: [AppComponent]

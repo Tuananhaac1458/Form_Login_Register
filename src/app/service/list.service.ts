@@ -30,6 +30,7 @@ export class Loginservice{
       // add sinhvien
       addsinhvien(Sinhvien : Config): Observable<Config> {
           const httpHeaders = this.httpUtils.getHTTPHeaders() ;
+          alert("Add sucress")
           return  this.http.post<Config>(this.urllist, Sinhvien,  { headers: httpHeaders })
          
       }
