@@ -8,11 +8,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let acc of account, let i = index"> 
+        <tr *ngFor="let acc of list, let i = index"> 
             <th scope="row">{{i}}</th>
             <td>{{acc.id}}</td>
-            <td>{{acc.user}}</td>
+            <td>{{acc.name}}</td>
             <td>{{acc.pass}}</td>
+            <td>{{acc.status}}</td>
             <td width="15%"><button class="btn btn-danger" (click)="deleteacc(i)">Delete</button> &nbsp;&nbsp;<button class="btn btn-success">Update</button></td>
           
           </tr>

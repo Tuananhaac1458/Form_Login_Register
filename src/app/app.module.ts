@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Loginservice } from './service/servicelogin.service';
+import { Loginservice } from './service/list.service';
 import {Login} from './Login/login.component';
 import {Register} from './Register/register.component';
 import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+import {HttpUtilsService} from './util/http.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +19,10 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [Loginservice,],
+  providers: [Loginservice,HttpUtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

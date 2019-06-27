@@ -1,7 +1,9 @@
 <form #formregister = "ngForm">
     <div class="form-group">
         <label>User name</label>
-        <input type="text" class="form-control" #Userid="ngModel"  name="user" placeholder="User name" required ngModel>
+        <input type="text" class="form-control" #Userid="ngModel"  name="user" placeholder="User name" required ngModel
+          [(ngModel)]="namee"
+        >
         <div *ngIf="Userid.errors && Userid.touched" class="alert alert-danger">
            User is required
         </div>
@@ -9,7 +11,7 @@
       </div>
       <div class="form-group">
         <label>Password</label>
-        <input type="password" class="form-control" #passid="ngModel" name="pass" placeholder="Password" required ngModel>
+        <input type="password" class="form-control" #passid="ngModel" name="pass" placeholder="Password" required ngModel [(ngModel)]="passe">
       </div>
       <div class="form-group">
         <label>Repassword</label>
@@ -18,7 +20,9 @@
           Repassword no exccilen
        </div>
       </div>
-     
+     <button (click) ="addsinhvien()">add</button>
+
+     <div *ngIf="clicker"> Reload de xem ket qua</div>
       <button [disabled]="formregister.invalid && (repassid.value != passid.value)" class="btn btn-primary" (click)="register(Userid.value,passid.value)">Register</button>
-</form>
+    </form>
 
